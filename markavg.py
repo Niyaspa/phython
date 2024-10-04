@@ -1,4 +1,3 @@
-_4_10-2024
 s1=int(input("enter the first subject mark :"))
 s2=int(input("enter the second subject mark :"))
 s3=int(input("enter the third subject mark :"))
