@@ -1,28 +1,28 @@
-dict1={'Name':'NIYAS','Roll Number':30, 'Registration Number':'WHAVBCA010', 'Department':'MCA', 'Semester':1}
-print("Dictionary : ",dict1)
-print()
+student = {}
+student['name'] = input("Enter student's name: ")
+student['roll_no'] = input("Enter roll number: ")
+student['reg_no'] = input("Enter registration number: ")
+student['department'] = input("Enter department: ")
+student['semester'] = input("Enter semester: ")
+print("\nStudent Details:")
+for i, value in student.items():
+    print(f"{i}: {value}")
 
-dict1['Total Mark']=int(input("Enter mark out of 100 : "))
-print("Dictionary after adding total mark : ",dict1)
-print()
-
-if dict1['Total Mark']>=90:
-    dict1['Grade']='A'
-
-elif dict1['Total Mark']>=82:
-    dict1['Grade']='B'
-
-elif dict1['Total Mark']>=60:
-    dict1['Grade']='C'
-
-elif dict1['Total Mark']>=50:
-    dict1['Grade']='P'
-
+student['total_marks'] = float(input("Enter total marks: "))
+if student['total_marks'] >= 90:
+    student['grade'] = 'A'
+elif student['total_marks'] >= 82:
+    student['grade'] = 'B'
+elif student['total_marks'] >= 75:
+    student['grade'] = 'C'
+elif student['total_marks'] >= 60:
+    student['grade'] = 'D'
+elif student['total_marks'] >= 50:
+    student['grade'] = 'P'
 else:
-    dict1['Grade']='F'
+    student['grade'] = 'F'
 
-print("Dictionary after adding grade : ",dict1)
-print()
-
-dict1.pop('Roll Number')
-print("Dictionary after deleting roll number : ",dict1)
+del student['roll_no']
+print("\nUpdated Student Details (after deleting roll number):")
+for i, value in student.items():
+    print(f"{i}: {value}")
